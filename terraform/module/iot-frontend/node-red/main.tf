@@ -1,96 +1,28 @@
-resource "kubernetes_deployment_v1" "node_red" {
-  metadata {
-    name      = "node-red"
-    namespace = var.namespace
-  }
+resource "helm_release" "node_red" {
+  name      = "node-red"
+  namespace = var.namespace
 
-  spec {
-    selector {
-      match_labels = {
-        app = "node-red"
-      }
-    }
+  repository = "https://schwarzit.github.io/node-red-chart/"
+  chart      = "node-red"
+  version    = "0.22.1"
 
-    template {
-      metadata {
-        labels = {
-          app = "node-red"
-        }
-      }
-
-      spec {
-        volume {
-          name = "node-red-data"
-          persistent_volume_claim {
-            claim_name = kubernetes_persistent_volume_claim_v1.node_red_data.metadata.0.name
-          }
-        }
-
-        container {
-          name  = "node-red"
-          image = "nodered/node-red:${var.node_red_version}"
-
-          port {
-            container_port = var.port
-          }
-
-          volume_mount {
-            name       = "node-red-data"
-            mount_path = "/data"
-          }
-        }
-      }
-    }
+  set {
+    name  = "persistence.enabled"
+    value = true
   }
 }
 
-resource "kubernetes_persistent_volume_claim_v1" "node_red_data" {
+resource "kubernetes_ingress_v1" "node_red_ingress" {
   metadata {
-    name      = "node-red-data-pvc"
-    namespace = var.namespace
-  }
-
-  spec {
-    storage_class_name = "longhorn-single-replica"
-    access_modes       = ["ReadWriteOnce"]
-
-    resources {
-      requests = {
-        storage = "500Mi"
-      }
-    }
-  }
-}
-
-resource "kubernetes_service_v1" "node_red" {
-  metadata {
-    name      = "node-red"
-    namespace = var.namespace
-  }
-
-  spec {
-    type = "LoadBalancer"
-
-    selector = {
-      app = "node-red"
-    }
-
-    port {
-      port        = var.port
-      target_port = var.port
-      protocol    = "TCP"
-    }
-  }
-
-}
-
-# Ingress for the Node Red dashboard.
-resource "kubernetes_ingress_v1" "node_red_dashboard" {
-  metadata {
-    name      = "node-red-dashboard"
+    name      = "node-red-ingress"
     namespace = var.namespace
     annotations = {
       "kubernetes.io/ingress.class" = "traefik"
+
+      # Hajimari dashboard config
+      "hajimari.io/enable" = true
+      "hajimari.io/info"   = "Node-RED dashboard"
+      "hajimari.io/icon"   = "mdi:cow"
     }
   }
 
@@ -104,9 +36,9 @@ resource "kubernetes_ingress_v1" "node_red_dashboard" {
           path_type = "Prefix"
           backend {
             service {
-              name = kubernetes_service_v1.node_red.metadata.0.name
+              name = "node-red"
               port {
-                number = var.port
+                number = 1880
               }
             }
           }
