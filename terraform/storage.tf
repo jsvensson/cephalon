@@ -8,7 +8,7 @@ module "longhorn" {
   source    = "./module/storage/longhorn"
   namespace = kubernetes_namespace_v1.longhorn_system.metadata.0.name
 
-  dashboard_host   = "longhorn.cortex.reducer.io"
+  dashboard_host   = "longhorn.${var.domain}"
   default_replicas = 1
 }
 

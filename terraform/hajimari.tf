@@ -33,7 +33,7 @@ resource "kubernetes_ingress_v1" "hajimari" {
 
   spec {
     rule {
-      host = "home.cortex.reducer.io"
+      host = "home.${var.domain}"
 
       http {
         path {
