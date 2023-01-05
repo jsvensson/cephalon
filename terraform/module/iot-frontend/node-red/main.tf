@@ -20,8 +20,9 @@ resource "kubernetes_deployment_v1" "node_red" {
 
       spec {
         volume {
+          name = "node-red-data"
           persistent_volume_claim {
-            claim_name = var.pvc_name
+            claim_name = kubernetes_persistent_volume_claim_v1.node_red_data.metadata.0.name
           }
         }
 
@@ -34,10 +35,28 @@ resource "kubernetes_deployment_v1" "node_red" {
           }
 
           volume_mount {
-            name       = var.pvc_name
+            name       = "node-red-data"
             mount_path = "/data"
           }
         }
+      }
+    }
+  }
+}
+
+resource "kubernetes_persistent_volume_claim_v1" "node_red_data" {
+  metadata {
+    name      = "node-red-data-pvc"
+    namespace = var.namespace
+  }
+
+  spec {
+    storage_class_name = "longhorn-single-replica"
+    access_modes       = ["ReadWriteOnce"]
+
+    resources {
+      requests = {
+        storage = "500Mi"
       }
     }
   }

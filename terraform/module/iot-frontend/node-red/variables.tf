@@ -20,8 +20,3 @@ variable "port" {
   description = "The port to use for Node-RED."
   default     = 1880
 }
-
-variable "pvc_name" {
-  type        = string
-  description = "The PVC name for data storage."
-}
