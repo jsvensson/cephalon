@@ -32,3 +32,24 @@ resource "kubernetes_storage_class_v1" "longhorn_single_replica" {
     fromBackup          = ""
   }
 }
+
+resource "kubernetes_manifest" "longhorn_daily_snapshot" {
+  manifest = {
+    apiVersion = "longhorn.io/v1beta1"
+    kind       = "RecurringJob"
+    metadata = {
+      name      = "longhorn-daily-snapshot"
+      namespace = kubernetes_namespace_v1.longhorn_system.metadata.0.name
+    }
+
+    spec = {
+      task        = "snapshot"
+      cron        = "0 3 * * ?" # 03:00 every day
+      retain      = 7
+      concurrency = 2
+      groups = [
+        "default",
+      ]
+    }
+  }
+}
