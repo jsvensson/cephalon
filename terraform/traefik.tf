@@ -36,10 +36,11 @@ resource "kubernetes_ingress_v1" "traefik_dashboard" {
       "kubernetes.io/ingress.class" = "traefik"
 
       # Hajimari dashboard config
-      "hajimari.io/enable" = true
-      "hajimari.io/info"   = "Traefik dashboard"
-      "hajimari.io/icon"   = "mdi:traffic-light"
-
+      "hajimari.io/enable"  = true
+      "hajimari.io/appName" = "Traefik"
+      "hajimari.io/info"    = "Traefik dashboard"
+      "hajimari.io/group"   = "Kubernetes"
+      "hajimari.io/icon"    = "mdi:traffic-light"
     }
   }
 

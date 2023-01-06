@@ -20,9 +20,11 @@ resource "kubernetes_ingress_v1" "node_red_ingress" {
       "kubernetes.io/ingress.class" = "traefik"
 
       # Hajimari dashboard config
-      "hajimari.io/enable" = true
-      "hajimari.io/info"   = "Node-RED dashboard"
-      "hajimari.io/icon"   = "mdi:cow"
+      "hajimari.io/enable"  = true
+      "hajimari.io/appName" = "Node-RED"
+      "hajimari.io/info"    = "Node-RED dashboard"
+      "hajimari.io/group"   = "IoT"
+      "hajimari.io/icon"    = "mdi:graph"
     }
   }
 

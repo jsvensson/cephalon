@@ -23,9 +23,11 @@ resource "kubernetes_ingress_v1" "longhorn_dashboard" {
       "kubernetes.io/ingress.class" = "traefik"
 
       # Hajimari dashboard config
-      "hajimari.io/enable" = true
-      "hajimari.io/info"   = "Longhorn dashboard"
-      "hajimari.io/icon"   = "mdi:cow"
+      "hajimari.io/enable"  = true
+      "hajimari.io/appName" = "Longhorn"
+      "hajimari.io/info"    = "Longhorn dashboard"
+      "hajimari.io/group"   = "Kubernetes"
+      "hajimari.io/icon"    = "mdi:cow"
     }
   }
 
