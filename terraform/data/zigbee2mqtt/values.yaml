@@ -1,0 +1,44 @@
+securityContext:
+  privileged: true
+
+persistence:
+  config:
+    enabled: true
+    mountPath: /data
+  usb:
+    enabled: true
+    type: hostPath
+    hostPath: ${usb_path}
+
+additionalVolumeMounts:
+  - name: usb
+    mountPath: ${usb_path}
+
+additionalVolumes:
+  - name: usb
+    mountPath: ${usb_path}
+
+affinity:
+  nodeAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: reducer.io/usbdevice
+              operator: In
+              values:
+                - zigbee-controller
+
+# This object goes into the zigbee2mqtt-settings ConfigMap
+config:
+  permit_join: false
+  mqtt:
+    server: mqtt://mosquitto.iot-backend:1883
+  serial:
+    port: ${usb_path}
+  advanced:
+    log_level: debug
+    pan_ID: 6754
+    ext_pan_id: [0xcd, 0x4b, 0xa7, 0x13, 0x6d, 0xa6, 0x5f, 0x27]
+    network_key: GENERATE
+  external_converters:
+    - neoplug-converter.js

@@ -1,8 +1,13 @@
-locals {
-  domain = "cortex.reducer.io"
-}
+# Add label to node 1, where the ZigStar stick is connected,
+# in order to do node selection for zigbee2mqtt.
+resource "kubernetes_labels" "cortex_node_1" {
+  metadata {
+    name = "cortex-node-1"
+  }
 
-module "n8n" {
-  source    = "./module/service/n8n"
-  namespace = "default"
+  api_version = "v1"
+  kind        = "Node"
+  labels = {
+    "reducer.io/usbdevice" = "zigbee-controller"
+  }
 }
