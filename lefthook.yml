@@ -1,0 +1,6 @@
+pre-commit:
+  commands:
+    tfsec:
+      run: tfsec ./terraform
+    tf-fmt:
+      run: terraform fmt ./terraform
