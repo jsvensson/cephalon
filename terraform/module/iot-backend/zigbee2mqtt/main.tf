@@ -1,3 +1,9 @@
+locals {
+  chart_version = "9.4.2"
+
+  # k8s-at-home repo is no longer maintained. Override z2m version in chart.
+  z2m_version = "1.29.1"
+}
 
 resource "helm_release" "zigbee2mqtt" {
   name      = "zigbee2mqtt"
@@ -5,8 +11,14 @@ resource "helm_release" "zigbee2mqtt" {
 
   repository = "https://k8s-at-home.com/charts/"
   chart      = "zigbee2mqtt"
-  version    = var.chart_version
+  version    = local.chart_version
   values     = [var.values]
+
+  # Override image tag version from chart
+  set {
+    name  = "image.tag"
+    value = local.z2m_version
+  }
 }
 
 resource "kubernetes_ingress_v1" "zigbee2mqtt_ingress" {

@@ -17,13 +17,11 @@ module "zigbee2mqtt" {
   source    = "./module/iot-backend/zigbee2mqtt"
   namespace = kubernetes_namespace_v1.iot_backend.metadata.0.name
 
-  chart_version = "9.4.2"
-
+  # Hostname for z2m dashboard
   ui_host = "z2m.${var.domain}"
 
   # Read as template
   values = templatefile("./data/zigbee2mqtt/values.yaml", {
     "usb_path" = "/dev/ttyUSB0"
   })
-
 }
