@@ -33,12 +33,12 @@ resource "kubernetes_storage_class_v1" "longhorn_single_replica" {
   }
 }
 
-resource "kubernetes_manifest" "longhorn_daily_snapshot" {
+resource "kubernetes_manifest" "longhorn_snapshot_daily" {
   manifest = {
     apiVersion = "longhorn.io/v1beta1"
     kind       = "RecurringJob"
     metadata = {
-      name      = "longhorn-daily-snapshot"
+      name      = "longhorn-snapshot-daily"
       namespace = kubernetes_namespace_v1.longhorn_system.metadata.0.name
     }
 
@@ -49,6 +49,7 @@ resource "kubernetes_manifest" "longhorn_daily_snapshot" {
       concurrency = 2
       groups = [
         "default",
+        "snapshot-daily",
       ]
     }
   }
