@@ -2,7 +2,7 @@ locals {
   chart_version = "9.4.2"
 
   # k8s-at-home repo is no longer maintained. Override z2m version in chart.
-  z2m_version = "1.29.1"
+  z2m_version = "1.29.2"
 }
 
 resource "helm_release" "zigbee2mqtt" {
