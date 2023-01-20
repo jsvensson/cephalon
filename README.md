@@ -18,10 +18,13 @@ The installation assumes that you have set up the nodes to allow SSH access, to 
 
 ## Hardware
 
-The cluster currently runs on three Raspberry Pis.
+The cluster currently runs on three Raspberry Pis, and a Rock Pi 5B.
 
-- master-1: Raspberry Pi 4, 4Gi RAM
+- leader-1: Raspberry Pi 4, 4Gi RAM
   - 240Gi SSD attached for Longhorn storage
-- node-1: Raspberry Pi 3B+, 1Gi RAM
+- agent-1: Raspberry Pi 3B+, 1Gi RAM
   - [Zig-Star Stick v4](https://zig-star.com/projects/zigbee-stick-v4/) attached as a Zigbee control unit
-- node-2: Raspberry Pi 3B+, 1Gi RAM
+  - 2Ti nVME stick for Longhorn storage
+- agent-2: Raspberry Pi 3B+, 1Gi RAM
+- agent-3: Rock Pi 5B, 8Gi RAM
+  - 2Ti nVME stick for OS + Longhorn storage
