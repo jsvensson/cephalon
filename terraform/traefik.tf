@@ -46,7 +46,7 @@ resource "kubernetes_ingress_v1" "traefik_dashboard" {
 
   spec {
     rule {
-      host = "traefik.cortex.reducer.io"
+      host = "traefik.${var.domain}"
 
       http {
         path {
