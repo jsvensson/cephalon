@@ -63,7 +63,7 @@ resource "kubernetes_service_v1" "mosquitto" {
   }
 
   spec {
-    type = "ClusterIP"
+    type = "LoadBalancer"
 
     selector = {
       app = "mosquitto"
@@ -75,5 +75,4 @@ resource "kubernetes_service_v1" "mosquitto" {
       protocol    = "TCP"
     }
   }
-
 }
