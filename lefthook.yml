@@ -6,3 +6,6 @@ pre-commit:
     tf-fmt:
       run: terraform fmt ./terraform
       tags: terraform, style
+    tflint:
+      run: tflint ./terraform
+      tags: terraform, style
