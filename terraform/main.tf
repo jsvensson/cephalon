@@ -1,8 +1,8 @@
-# Add label to node 1, where the ZigStar stick is connected,
+# Add label to node where the ZigStar stick is connected,
 # in order to do node selection for zigbee2mqtt.
-resource "kubernetes_labels" "cortex_node_1" {
+resource "kubernetes_labels" "cephalon_agent_1" {
   metadata {
-    name = "cortex-node-1"
+    name = "cephalon-agent-1"
   }
 
   api_version = "v1"
