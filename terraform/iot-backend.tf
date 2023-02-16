@@ -7,7 +7,7 @@ resource "kubernetes_namespace_v1" "iot_backend" {
 
 module "mosquitto" {
   source    = "./module/iot-backend/mosquitto"
-  namespace = kubernetes_namespace_v1.iot_backend.metadata.0.name
+  namespace = kubernetes_namespace_v1.iot_backend.metadata[0].name
 
   mosquitto_version = "2.0.15"
   mosquitto_conf    = "./data/mosquitto/mosquitto.conf"
@@ -15,7 +15,7 @@ module "mosquitto" {
 
 module "zigbee2mqtt" {
   source    = "./module/iot-backend/zigbee2mqtt"
-  namespace = kubernetes_namespace_v1.iot_backend.metadata.0.name
+  namespace = kubernetes_namespace_v1.iot_backend.metadata[0].name
 
   # Hostname for z2m dashboard
   ui_host = "z2m.${var.domain}"

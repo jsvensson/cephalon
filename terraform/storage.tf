@@ -6,7 +6,7 @@ resource "kubernetes_namespace_v1" "longhorn_system" {
 
 module "longhorn" {
   source    = "./module/storage/longhorn"
-  namespace = kubernetes_namespace_v1.longhorn_system.metadata.0.name
+  namespace = kubernetes_namespace_v1.longhorn_system.metadata[0].name
 
   dashboard_host   = "longhorn.${var.domain}"
   default_replicas = 1
@@ -65,7 +65,7 @@ resource "kubernetes_manifest" "longhorn_snapshot_daily" {
     kind       = "RecurringJob"
     metadata = {
       name      = "longhorn-snapshot-daily"
-      namespace = kubernetes_namespace_v1.longhorn_system.metadata.0.name
+      namespace = kubernetes_namespace_v1.longhorn_system.metadata[0].name
     }
 
     spec = {
@@ -88,7 +88,7 @@ resource "kubernetes_manifest" "longhorn_snapshot_hourly" {
     kind       = "RecurringJob"
     metadata = {
       name      = "longhorn-snapshot-hourly"
-      namespace = kubernetes_namespace_v1.longhorn_system.metadata.0.name
+      namespace = kubernetes_namespace_v1.longhorn_system.metadata[0].name
     }
 
     spec = {
