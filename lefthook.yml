@@ -1,7 +1,7 @@
 pre-commit:
   commands:
     trivy:
-      run: trivy fs --scanners vuln,config ./
+      run: trivy fs ./
       tags: terraform, audit
     tf-fmt:
       run: terraform fmt ./terraform
