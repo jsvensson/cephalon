@@ -1,11 +1,14 @@
 pre-commit:
   commands:
-    trivy:
-      run: trivy fs ./
-      tags: terraform, audit
     tf-fmt:
       run: terraform fmt ./terraform
       tags: terraform, style
     tflint:
       run: tflint ./terraform
       tags: terraform, style
+
+pre-push:
+  commands:
+    trivy:
+      run: trivy fs ./
+      tags: audit
