@@ -22,6 +22,26 @@ provider "registry.terraform.io/1password/onepassword" {
   ]
 }
 
+provider "registry.terraform.io/aminueza/minio" {
+  version     = "1.12.0"
+  constraints = "1.12.0"
+  hashes = [
+    "h1:HTOewsR+Gtsh8qw6aT/GnaEei5DrEMsYPehsJ+xcN60=",
+    "zh:0590c7c137d4b8d97deeabaff1a6591bc4c9a7e75ad7524632689a4742b3ba0d",
+    "zh:08803ec210ee53e896d8808495cbba03cd7e79c466cb82520b819f980090f28d",
+    "zh:0ecd81579918e07981e489fc74a004435e09baa107f8c9038550b8406e5d484b",
+    "zh:6caa8781fa0911e6c54a7af942efc43f430492946642c3aec2fada1a82e11d0d",
+    "zh:72fec268a7832a3e4f16d6e8feee6d8add2273a56bf1af089c812f0124d0e22c",
+    "zh:8c19b68a688b37ed631762e1ad710aff404c047fb41e21adc1326c3ee84cae39",
+    "zh:921c6be12f185cc501a55a429f458a89d9522facbaab9c0e943a28b6164ea2c9",
+    "zh:bdfa5da760fd6a8f58235c4868e8fe2e1335f0fe409ad4d9ef24fb0ab6ccb5d5",
+    "zh:c620d72d9a8540423c5974f0653a0ab861d3a8928e6863b90bc3a26d1e7dc0c1",
+    "zh:dd708013183f70359681c9943d11db774863051695b176d776c37c1bfd56fd96",
+    "zh:e3b3fca1ff4a992ad246c193b9531b1cb9771c62c7aeb5338caf9498062ebd48",
+    "zh:fc2221b04d210c25d68d7d3130abbe706b2ac553858183c34e99ccced015793a",
+  ]
+}
+
 provider "registry.terraform.io/hashicorp/helm" {
   version     = "2.9.0"
   constraints = "2.9.0"

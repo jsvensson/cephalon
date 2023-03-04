@@ -16,6 +16,11 @@ terraform {
       source  = "1Password/onepassword"
       version = "1.1.4"
     }
+
+    minio = {
+      source  = "aminueza/minio"
+      version = "1.12.0"
+    }
   }
 }
 
@@ -32,4 +37,9 @@ provider "helm" {
 
 provider "onepassword" {
   url = "http://1password-connect.cortex.reducer.io"
+}
+
+provider "minio" {
+  minio_server = var.minio_server
+  minio_region = var.minio_region
 }
