@@ -11,6 +11,11 @@ terraform {
       source  = "hashicorp/helm"
       version = "2.9.0"
     }
+
+    onepassword = {
+      source  = "1Password/onepassword"
+      version = "1.1.4"
+    }
   }
 }
 
@@ -23,4 +28,8 @@ provider "helm" {
   kubernetes {
     config_path = "~/.kube/config"
   }
+}
+
+provider "onepassword" {
+
 }
