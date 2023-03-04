@@ -40,6 +40,8 @@ provider "onepassword" {
 }
 
 provider "minio" {
-  minio_server = var.minio_server
-  minio_region = var.minio_region
+  minio_region   = onepassword_item.minio_terraform.section[0].field[0].value
+  minio_server   = onepassword_item.minio_terraform.url
+  minio_user     = onepassword_item.minio_terraform.username
+  minio_password = onepassword_item.minio_terraform.password
 }
