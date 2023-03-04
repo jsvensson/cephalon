@@ -70,7 +70,7 @@ resource "kubernetes_manifest" "longhorn_snapshot_daily" {
 
     spec = {
       task        = "snapshot"
-      cron        = "0 3 * * ?" # 03:00 every day
+      cron        = "0 2 * * ?" # 02:00 every day
       retain      = 7
       concurrency = 2
       groups = [
