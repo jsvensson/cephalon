@@ -12,30 +12,6 @@ module "longhorn" {
   default_replicas = 1
 }
 
-# Create a storage class that only uses a single replica
-# DEPRECATED: Only used for legacy PVs from when I only had a single drive.
-resource "kubernetes_storage_class_v1" "longhorn_single_replica" {
-  metadata {
-    name = "longhorn-single-replica"
-    annotations = {
-      "storageclass.kubernetes.io/is-default-class" = false
-    }
-  }
-
-  storage_provisioner    = "driver.longhorn.io"
-  allow_volume_expansion = true
-  reclaim_policy         = "Delete"
-  volume_binding_mode    = "Immediate"
-
-  parameters = {
-    numberOfReplicas    = 2
-    fsType              = "ext4"
-    staleReplicaTimeout = 30
-    dataLocality        = "disabled"
-    fromBackup          = ""
-  }
-}
-
 resource "kubernetes_storage_class_v1" "longhorn_replica" {
   metadata {
     name = "longhorn-replica"
