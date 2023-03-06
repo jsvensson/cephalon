@@ -1,0 +1,4 @@
+.idea/
+
+# 1Password Connect credentials file
+**/1password-credentials.json

@@ -2,6 +2,3 @@
 terraform.tfstate
 terraform.tfstate.backup
 tf.plan
-
-# 1Password Connect credentials file
-1password-credentials.json
