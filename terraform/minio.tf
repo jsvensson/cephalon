@@ -30,17 +30,15 @@ resource "onepassword_item" "minio_terraform" {
 
 #############################################
 ###
-### Managed Longhorn test
+### Longhorn
 ###
 
-# Test to see if I can manage the Longhorn user from here.
-# Current user was manually created.
 resource "minio_iam_user" "longhorn" {
-  name = "longhorn-managed"
+  name = "longhorn"
 }
 
-resource "minio_s3_bucket" "longhorn_managed" {
-  bucket = "longhorn-managed"
+resource "minio_s3_bucket" "longhorn" {
+  bucket = "longhorn"
   acl    = "private"
 }
 
@@ -60,7 +58,7 @@ resource "minio_iam_policy" "longhorn_rw" {
             "s3:GetBucketLocation",
           ],
           "Resource" = [
-            "arn:aws:s3:::${minio_s3_bucket.longhorn_managed.bucket}"
+            "arn:aws:s3:::${minio_s3_bucket.longhorn.bucket}"
           ]
         }
       ]
