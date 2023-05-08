@@ -23,22 +23,22 @@ provider "registry.terraform.io/1password/onepassword" {
 }
 
 provider "registry.terraform.io/aminueza/minio" {
-  version     = "1.14.0"
-  constraints = "1.14.0"
+  version     = "1.15.1"
+  constraints = "1.15.1"
   hashes = [
-    "h1:cJB7fAAz/PX+/TIBWRLfWf6Rnczt6uiWQX/0Cu+yQ8A=",
-    "zh:01d9cfc99ae115fecb1e2b877c75f519a2f1f9563a34c735e297de03acba6779",
-    "zh:027246e19f1bd77205164d5506f93bd53bb06dbd45ac102040b330f9acd8cd6e",
-    "zh:0c1361735a3895b0f3105071e7f6d0ce1b994803205f0ed76fb6e5b3bb0d8014",
-    "zh:15cc0dc778db45ffa8a1bb2b0032248942b03d8a13d21e6b2bc140d3f40eda33",
-    "zh:353907c367a4e03a15559446d34cac0eadb1cccd915567ed62f5105d0f3913f9",
-    "zh:3f765c0cafaea527136526f0234955a05bc4a341e5473e3f43d0f9be539769bf",
-    "zh:7a6bef1be23d7b807bafec9dd2f79d0fdae08786fc071d7fb145a07b4d3fbd32",
-    "zh:87a42ca308a25e2bf2474856d8dc2c741deb0bdd6112ed909e35821d437252b2",
-    "zh:b06420ffd679b567a577f5f6d715cada1efb74fe81a1714a3817f9f998f2b954",
-    "zh:d29b0f2d9039f266963778a63cdd042b51db3a75e0f387b31cf034ce52b99ddc",
-    "zh:dc131139377d34bcbc037f7b6e336a84d531e7bf3435c0f92414c52e2c078f64",
-    "zh:de99b17cfa2cb83f150176ec50f133d0efb0647108ade0ba3994906ac6403861",
+    "h1:vJG0wpdZGuhasWpvwSrds6lsPHMdl/W5JZbWhN1mBy8=",
+    "zh:1d39eb3095e9ea18cad8946dc5bad83eb75f854f43207573296ac3ff93f3f9be",
+    "zh:3c134a8df4e3521f76fe27548770accb2c324d1f04ebde1fc68dfbfc776c6fb3",
+    "zh:5966dddb4cfdf86d2b0e734fec8bdb1e000d080a8b0407115798167aa7ee8323",
+    "zh:746a691c77f7fa654ddf1c4fa6fb27b986b42e6d696c5eae01a9c40ec6325d2a",
+    "zh:961dde082d198f9978f36221a34cd32535313b64d9c7cba85682bc8ff2a7c312",
+    "zh:a4bc8e82e83c0e08261c809ae4d817e8010b72b367cdb0ea5f72ebbd2e6fd6ef",
+    "zh:bc6f1988a9cfce6d531c6206cd07bf2a573cca84b53326fd9eca0c74f92bac31",
+    "zh:c3f5474430ab23a8075f5917257f092cd3cae12c203b7faf817a04ef600721ec",
+    "zh:ea3b12ba3941c415b3df69d060a468966a29ee5473c1e75dd2fbe78782aac13c",
+    "zh:eb5d7c21f7e78e966e6a41c22af9a3dd0470d87de9d1bc6679b438d7996d50d7",
+    "zh:f1da277160771018a98127875a40b157a5fb9a5814dc7f741b1c8301eb9017c2",
+    "zh:fbe83ebd0f4b0704853ba34b8488ad873eb99fe2292db21621a7eeac6fb371e9",
   ]
 }
 
