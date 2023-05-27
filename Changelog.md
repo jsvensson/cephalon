@@ -1,5 +1,14 @@
 # Changelog
 
+## Version v0.0.2 (2023-05-27)
+
+### Chores and tidying
+
+- **grafana:** disable Grafana module for now (20d2ef42)
+- **grafana:** bump helm chart from 6.50.0 to 6.56.6 (999a32eb)
+- **nodered:** bump from 0.22.1 to 0.23.2 (974c6f92)
+- **zigbee2mqtt:** Bump from 1.30.0 to 1.30.4 (fe0c46d2)
+
 ## Version v0.0.1 (2023-05-25)
 
 ### Fixes
