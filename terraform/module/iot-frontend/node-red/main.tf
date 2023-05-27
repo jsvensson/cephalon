@@ -4,7 +4,7 @@ resource "helm_release" "node_red" {
 
   repository = "https://schwarzit.github.io/node-red-chart/"
   chart      = "node-red"
-  version    = "0.22.1"
+  version    = "0.23.2"
 
   set {
     name  = "persistence.enabled"
