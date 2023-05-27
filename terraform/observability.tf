@@ -11,12 +11,12 @@ module "uptime_kuma" {
   dashboard_host = "uptime.${var.domain}"
 }
 
-module "grafana" {
-  source    = "./module/observability/grafana"
-  namespace = kubernetes_namespace_v1.observability.metadata[0].name
-
-  host = "grafana.${var.domain}"
-}
+#module "grafana" {
+#  source    = "./module/observability/grafana"
+#  namespace = kubernetes_namespace_v1.observability.metadata[0].name
+#
+#  host = "grafana.${var.domain}"
+#}
 
 #module "influxdb" {
 #  source    = "./module/observability/influxdb"
