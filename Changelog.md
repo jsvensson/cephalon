@@ -1,5 +1,11 @@
 # Changelog
 
+## Version v0.1.1 (2023-05-29)
+
+### Chores and tidying
+
+- **cloudflared:** rename Terraform resource for clarity (68422107)
+
 ## Version v0.1.0 (2023-05-28)
 
 ### Features
