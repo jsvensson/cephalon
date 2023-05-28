@@ -1,5 +1,12 @@
 # Changelog
 
+## Version v0.1.0 (2023-05-28)
+
+### Features
+
+- **cloudflared:** enable module (56832199)
+- **cloudflared:** create module (65081a6e)
+
 ## Version v0.0.2 (2023-05-27)
 
 ### Chores and tidying
