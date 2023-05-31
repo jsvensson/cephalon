@@ -21,6 +21,11 @@ terraform {
       source  = "aminueza/minio"
       version = "1.15.2"
     }
+
+    cloudflare = {
+      source  = "cloudflare/cloudflare"
+      version = "4.7.1"
+    }
   }
 }
 
@@ -44,4 +49,8 @@ provider "minio" {
   minio_server   = onepassword_item.minio_terraform.url
   minio_user     = onepassword_item.minio_terraform.username
   minio_password = onepassword_item.minio_terraform.password
+}
+
+provider "cloudflare" {
+  api_token = onepassword_item.cloudflare_provider.section[0].field[0].value
 }
