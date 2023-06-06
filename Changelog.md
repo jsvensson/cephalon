@@ -1,5 +1,16 @@
 # Changelog
 
+## Version v0.2.0 (2023-06-06)
+
+### Features
+
+- **cloudflare:** add Cloudflare provider (0871061a)
+
+### Ops and CI/CD
+
+- **deps:** bump hashicorp/kubernetes in /terraform (71a0344b)
+- **deps:** bump hashicorp/helm from 2.9.0 to 2.10.1 in /terraform (2612e0d4)
+
 ## Version v0.1.1 (2023-05-29)
 
 ### Chores and tidying
