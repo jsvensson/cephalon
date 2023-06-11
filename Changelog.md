@@ -1,5 +1,11 @@
 # Changelog
 
+## Version v0.2.2 (2023-06-11)
+
+### Chores and tidying
+
+- **gitignore:** ignore .env files (7f4544b1)
+
 ## Version v0.2.1 (2023-06-11)
 
 ### Ops and CI/CD
