@@ -1,5 +1,11 @@
 # Changelog
 
+## Version v0.2.1 (2023-06-11)
+
+### Ops and CI/CD
+
+- **task:** Add Taskfile (525a9fa0)
+
 ## Version v0.2.0 (2023-06-06)
 
 ### Features
