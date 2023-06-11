@@ -1,5 +1,11 @@
 # Changelog
 
+## Version v0.2.3 (2023-06-11)
+
+### Chores and tidying
+
+- **zigbee2mqtt:** move network key into 1Password (d942d6a9)
+
 ## Version v0.2.2 (2023-06-11)
 
 ### Chores and tidying
