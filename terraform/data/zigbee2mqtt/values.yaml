@@ -39,6 +39,4 @@ config:
     log_level: debug
     pan_ID: 6754
     ext_pan_id: [0xcd, 0x4b, 0xa7, 0x13, 0x6d, 0xa6, 0x5f, 0x27]
-    network_key: GENERATE
-  external_converters:
-    - neoplug-converter.js
+    network_key: ${network_key}

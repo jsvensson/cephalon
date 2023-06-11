@@ -22,6 +22,21 @@ module "zigbee2mqtt" {
 
   # Read as template
   values = templatefile("./data/zigbee2mqtt/values.yaml", {
-    "usb_path" = "/dev/ttyUSB0"
+    "usb_path"    = "/dev/ttyUSB0"
+    "network_key" = onepassword_item.z2m_secrets.section[0].field[0].value
   })
+}
+
+resource "onepassword_item" "z2m_secrets" {
+  vault    = var.onepassword_vault_id
+  category = "password"
+  title    = "Zigbee2MQTT secrets"
+
+  section {
+    label = "Secrets"
+
+    field {
+      label = "Network key"
+    }
+  }
 }
