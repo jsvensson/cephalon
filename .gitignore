@@ -2,3 +2,6 @@
 
 # 1Password Connect credentials file
 **/1password-credentials.json
+
+# Ignore .env files until I decide what's safe to check in
+**/.env
