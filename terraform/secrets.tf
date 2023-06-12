@@ -10,3 +10,7 @@ module "onepassword" {
 
   domain = "1password-connect.${var.domain}"
 }
+
+data "onepassword_vault" "homelab" {
+  name = var.onepassword_vault_name
+}

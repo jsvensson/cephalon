@@ -6,7 +6,7 @@ resource "kubernetes_namespace_v1" "network" {
 
 ### Cloudflare provider credentials
 resource "onepassword_item" "cloudflare_provider" {
-  vault = var.onepassword_vault_id
+  vault = data.onepassword_vault.homelab.uuid
 
   title    = "Cloudflare provider"
   category = "password"
@@ -24,7 +24,7 @@ resource "onepassword_item" "cloudflare_provider" {
 ### Cloudflare Tunnel credentials
 # Create 1Password item. Manually populated with the Cloudflare tokens etc.
 resource "onepassword_item" "cloudflare_tunnel" {
-  vault = var.onepassword_vault_id
+  vault = data.onepassword_vault.homelab.uuid
 
   title    = "Cloudflare Tunnel"
   category = "password"

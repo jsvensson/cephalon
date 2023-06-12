@@ -28,7 +28,7 @@ module "zigbee2mqtt" {
 }
 
 resource "onepassword_item" "z2m_secrets" {
-  vault    = var.onepassword_vault_id
+  vault    = data.onepassword_vault.homelab.uuid
   category = "password"
   title    = "Zigbee2MQTT secrets"
 
