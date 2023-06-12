@@ -7,7 +7,7 @@
 # This user must be manually created in Minio using the credentials in 1Password
 # so that it has access for future operations.
 resource "onepassword_item" "minio_terraform" {
-  vault = var.onepassword_vault_id
+  vault = data.onepassword_vault.homelab.uuid
 
   title    = "Minio user for Terraform"
   category = "login"
