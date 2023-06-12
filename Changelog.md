@@ -1,5 +1,15 @@
 # Changelog
 
+## Version v0.2.4 (2023-06-12)
+
+### Ops and CI/CD
+
+- add .env file with 1P Connect variable (de61332a)
+
+### Chores and tidying
+
+- **1password:** move vault management from variable to a data source (1a1a6d35)
+
 ## Version v0.2.3 (2023-06-11)
 
 ### Chores and tidying
