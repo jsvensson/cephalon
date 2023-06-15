@@ -1,5 +1,16 @@
 # Changelog
 
+## Version v0.2.5 (2023-06-15)
+
+### Fixes
+
+- **cloudflare:** read provider API token from correct field (46959d9d)
+
+### Chores and tidying
+
+- **zigbee2mqtt:** move Mosquitto host from template to terraform (824af69b)
+- **cloudflare:** rework tunnel setup (05c1b522)
+
 ## Version v0.2.4 (2023-06-12)
 
 ### Ops and CI/CD
