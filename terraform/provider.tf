@@ -52,5 +52,5 @@ provider "minio" {
 }
 
 provider "cloudflare" {
-  api_token = onepassword_item.cloudflare_provider.section[0].field[0].value
+  api_token = onepassword_item.cloudflare_provider.password
 }
