@@ -32,7 +32,7 @@ affinity:
 config:
   permit_join: false
   mqtt:
-    server: mqtt://mosquitto.iot-backend:1883
+    server: ${mosquitto_host}
   serial:
     port: ${usb_path}
   advanced:

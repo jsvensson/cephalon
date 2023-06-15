@@ -22,8 +22,9 @@ module "zigbee2mqtt" {
 
   # Read as template
   values = templatefile("./data/zigbee2mqtt/values.yaml", {
-    "usb_path"    = "/dev/ttyUSB0"
-    "network_key" = onepassword_item.z2m_secrets.section[0].field[0].value
+    "usb_path"       = "/dev/ttyUSB0"
+    "network_key"    = onepassword_item.z2m_secrets.section[0].field[0].value
+    "mosquitto_host" = "mqtt://mosquitto.iot-backend:1883"
   })
 }
 
