@@ -10,12 +10,19 @@ resource "onepassword_item" "cloudflare_provider" {
 
   title    = "Cloudflare provider"
   category = "password"
+  tags = [
+    "cloudflare",
+  ]
 
   section {
     label = "Settings"
 
     field {
       label = "Account ID"
+    }
+
+    field {
+      label = "Zone ID"
     }
   }
 
@@ -28,6 +35,9 @@ resource "onepassword_item" "cloudflare_tunnel" {
 
   title    = "Cloudflare Tunnel"
   category = "password"
+  tags = [
+    "cloudflare",
+  ]
 }
 
 # Create tunnel
