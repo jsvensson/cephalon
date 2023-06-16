@@ -1,5 +1,12 @@
 # Changelog
 
+## Version v0.2.6 (2023-06-16)
+
+### Chores and tidying
+
+- **git:** ignore tfstate backup files (c5c44b35)
+- **cloudflared:** override image version in chart (34576e5b)
+
 ## Version v0.2.5 (2023-06-15)
 
 ### Fixes
