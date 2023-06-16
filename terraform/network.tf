@@ -25,7 +25,6 @@ resource "onepassword_item" "cloudflare_provider" {
       label = "Zone ID"
     }
   }
-
 }
 
 ### Cloudflare Tunnel credentials
