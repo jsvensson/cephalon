@@ -1,5 +1,15 @@
 # Changelog
 
+## Version v0.2.7 (2023-06-20)
+
+### Ops and CI/CD
+
+- **deps:** bump cloudflare/cloudflare in /terraform (fde71f24)
+
+### Other
+
+- deps(terraform): upgrade terraform to v1.5.0 (5853490d)
+
 ## Version v0.2.6 (2023-06-16)
 
 ### Chores and tidying
