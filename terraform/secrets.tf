@@ -12,5 +12,6 @@ module "onepassword" {
 }
 
 data "onepassword_vault" "homelab" {
+  # The provider looks up the vault UUID from the vault name and populates `uuid`.
   name = var.onepassword_vault_name
 }
