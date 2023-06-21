@@ -4,7 +4,7 @@ pre-commit:
       run: terraform fmt ./terraform
       tags: terraform, style
     tflint:
-      run: tflint ./terraform
+      run: tflint --chdir=terraform
       tags: terraform, style
 
 pre-push:
