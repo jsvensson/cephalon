@@ -58,3 +58,7 @@ resource "kubernetes_ingress_v1" "zigbee2mqtt_ingress" {
     }
   }
 }
+
+output "hostname" {
+  value = var.ui_host
+}
