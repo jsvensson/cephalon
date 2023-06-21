@@ -11,5 +11,10 @@ resource "helm_release" "robusta" {
     name  = "clusterName"
     value = "cortex"
   }
+
+  set {
+    name  = "enablePrometheusStack"
+    value = true
+  }
 }
 
