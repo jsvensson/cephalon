@@ -26,7 +26,7 @@ resource "kubernetes_storage_class_v1" "longhorn_replica" {
   volume_binding_mode    = "Immediate"
 
   parameters = {
-    numberOfReplicas    = 2
+    numberOfReplicas    = 3
     fsType              = "ext4"
     staleReplicaTimeout = 30
     dataLocality        = "disabled"
