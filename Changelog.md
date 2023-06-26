@@ -1,5 +1,31 @@
 # Changelog
 
+## Version v0.3.0 (2023-06-27)
+
+### Features
+
+- **robusta:** added initial setup to cluster (cde99163)
+
+### Fixes
+
+- **lefthook:** fix outdated tflint argument format (ce9048cb)
+
+### Tests
+
+- test (1c45abc9)
+
+### Chores and tidying
+
+- **portainer:** remove portainer for now (4a38ebde)
+- **longhorn:** change default replicas from 2 to 3 (6bd9a683)
+- **robusta:** enable Prometheus stack (4570dc4c)
+- **cloudflare:** add secrets; first attempt at a tunnel (53818654)
+- **1password:** add tags to cloudflare items (32a90531)
+
+### Other
+
+- deps(zigbee2mqtt): update from 1.30.4 to 1.31.2 (1e9f50ed)
+
 ## Version v0.2.7 (2023-06-20)
 
 ### Ops and CI/CD
