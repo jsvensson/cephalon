@@ -1,5 +1,13 @@
 # Changelog
 
+## Version v0.3.1 (2023-07-17)
+
+### Ops and CI/CD
+
+- **deps:** bump 1Password/onepassword in /terraform (7fe965a6)
+- **deps:** bump cloudflare/cloudflare in /terraform (9d7c4497)
+- **deps:** bump hashicorp/kubernetes in /terraform (a7a78c97)
+
 ## Version v0.3.0 (2023-06-27)
 
 ### Features
