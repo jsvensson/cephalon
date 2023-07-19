@@ -3,6 +3,9 @@ pre-commit:
     tf-fmt:
       run: terraform fmt ./terraform
       tags: terraform, style
+    tf-validate:
+      run: terraform validate
+      tags: terraform, audit
     tflint:
       run: tflint --chdir=terraform
       tags: terraform, style
