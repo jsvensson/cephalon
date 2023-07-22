@@ -1,5 +1,20 @@
 # Changelog
 
+## Version v0.3.2 (2023-07-22)
+
+### Ops and CI/CD
+
+- **deps:** bump aminueza/minio from 1.15.2 to 1.16.0 in /terraform (67c83fae)
+
+### Chores and tidying
+
+- **gitignore:** add .DS_Store (7f063924)
+- **lefthook:** add terraform validate to pre-commit (0ac401e7)
+
+### Other
+
+- deps(terraform): bump from v1.5.0 to v1.5.3 (608d511b)
+
 ## Version v0.3.1 (2023-07-17)
 
 ### Ops and CI/CD
