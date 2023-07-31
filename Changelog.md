@@ -1,5 +1,12 @@
 # Changelog
 
+## Version v0.3.3 (2023-07-31)
+
+### Ops and CI/CD
+
+- **deps:** bump aminueza/minio from 1.16.0 to 1.17.1 in /terraform (6d74fac0)
+- **deps:** bump cloudflare/cloudflare in /terraform (04a5bc90)
+
 ## Version v0.3.2 (2023-07-22)
 
 ### Ops and CI/CD
