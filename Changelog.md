@@ -1,5 +1,15 @@
 # Changelog
 
+## Version v0.3.4 (2023-08-20)
+
+### Ops and CI/CD
+
+- **deps:** bump aminueza/minio from 1.17.1 to 1.17.2 in /terraform (cbd9ff79)
+
+### Other
+
+- deps(zigbee2mqtt): bump to 1.32.2 (91f1165b)
+
 ## Version v0.3.3 (2023-07-31)
 
 ### Ops and CI/CD
