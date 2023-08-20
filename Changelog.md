@@ -1,5 +1,16 @@
 # Changelog
 
+## Version v0.3.5 (2023-08-20)
+
+### Ops and CI/CD
+
+- **deps:** bump cloudflare/cloudflare in /terraform (8ab149dd)
+- **deps:** bump hashicorp/kubernetes in /terraform (e424b78d)
+
+### Chores and tidying
+
+- **terraform:** loosen Terraform version requirement (0e0952ef)
+
 ## Version v0.3.4 (2023-08-20)
 
 ### Ops and CI/CD
