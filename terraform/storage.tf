@@ -8,6 +8,7 @@ module "longhorn" {
   source    = "./module/storage/longhorn"
   namespace = kubernetes_namespace_v1.longhorn_system.metadata[0].name
 
+  longhorn_version = "1.5.1"
   dashboard_host   = "longhorn.${var.domain}"
   default_replicas = 1
 }

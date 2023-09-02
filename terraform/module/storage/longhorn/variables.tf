@@ -6,7 +6,6 @@ variable "namespace" {
 variable "longhorn_version" {
   type        = string
   description = "The version of Longhorn to use."
-  default     = "1.4.0"
 }
 
 variable "dashboard_host" {
