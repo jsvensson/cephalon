@@ -18,10 +18,16 @@ module "uptime_kuma" {
 #  host = "grafana.${var.domain}"
 #}
 
-#module "influxdb" {
-#  source    = "./module/observability/influxdb"
-#  namespace = kubernetes_namespace_v1.observability.metadata.0.name
-#
-#  host = "influxdb.${var.domain}"
-#}
 
+resource "kubernetes_namespace_v1" "influx" {
+  metadata {
+    name = "influx"
+  }
+}
+
+module "influxdb" {
+  source    = "./module/observability/influxdb"
+  namespace = kubernetes_namespace_v1.influx.metadata[0].name
+
+  host = "influx.${var.domain}"
+}
