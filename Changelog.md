@@ -1,5 +1,22 @@
 # Changelog
 
+## Version v0.4.0 (2023-09-12)
+
+### Features
+
+- **influx:** add influxdb chart (e5f1a55b)
+
+### Ops and CI/CD
+
+- **deps:** bump cloudflare/cloudflare in /terraform (9ecf36a2)
+- **deps:** bump aminueza/minio from 1.17.2 to 1.18.0 in /terraform (d2e8d41f)
+- **deps:** bump cloudflare/cloudflare in /terraform (90b5b456)
+- **deps:** bump hashicorp/helm from 2.10.1 to 2.11.0 in /terraform (6910ff07)
+
+### Chores and tidying
+
+- **longhorn:** pass Longhorn version to module; bump to 1.5.1 (848aaf76)
+
 ## Version v0.3.5 (2023-08-20)
 
 ### Ops and CI/CD
