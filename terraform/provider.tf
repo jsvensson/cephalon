@@ -19,7 +19,7 @@ terraform {
 
     minio = {
       source  = "aminueza/minio"
-      version = "1.18.0"
+      version = "2.0.1"
     }
 
     cloudflare = {
