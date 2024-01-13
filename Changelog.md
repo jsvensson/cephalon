@@ -1,5 +1,22 @@
 # Changelog
 
+## Version v0.4.1 (2024-01-13)
+
+### Ops and CI/CD
+
+- **deps:** bump hashicorp/kubernetes in /terraform (20de1398)
+- **deps:** bump 1Password/onepassword in /terraform (a3a548f2)
+- **deps:** bump hashicorp/helm from 2.11.0 to 2.12.1 in /terraform (12875136)
+- **deps:** bump cloudflare/cloudflare in /terraform (56d1ef2f)
+- **deps:** bump aminueza/minio from 1.18.0 to 2.0.1 in /terraform (307a71a3)
+- **deps:** bump 1Password/onepassword in /terraform (0bfe7029)
+- **deps:** bump cloudflare/cloudflare in /terraform (f545a2a9)
+- **deps:** bump cloudflare/cloudflare in /terraform (f2838211)
+
+### Chores and tidying
+
+- **zigbee2mqtt:** bump from 1.32.2 to 1.33.0 (5d74b533)
+
 ## Version v0.4.0 (2023-09-12)
 
 ### Features
