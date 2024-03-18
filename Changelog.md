@@ -1,5 +1,14 @@
 # Changelog
 
+## Version v0.4.2 (2024-03-18)
+
+### Ops and CI/CD
+
+- **deps:** bump aminueza/minio from 2.0.1 to 2.2.0 in /terraform (30994bf5)
+- **deps:** bump hashicorp/kubernetes in /terraform (e54a4ad0)
+- **deps:** bump cloudflare/cloudflare in /terraform (a5960b07)
+- **deps:** bump 1Password/onepassword in /terraform (9ef9ce8b)
+
 ## Version v0.4.1 (2024-01-13)
 
 ### Ops and CI/CD
